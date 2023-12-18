@@ -1,2 +1,24 @@
-using npm i bootstrap
-and import it in style.css file.
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a routerLink="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a routerLink="/users">Users</a>
+                </li>
+                <li class="nav-item">
+                    <a routerLink="/category">Ctegory</a>
+                </li>
+            </ul>
+        </div>
+        <div class="col-md-9">
+            <div class="row">
+                <div class="col-md-12">
+                    <router-outlet></router-outlet>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
