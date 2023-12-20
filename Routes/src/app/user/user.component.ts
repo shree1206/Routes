@@ -31,4 +31,12 @@ export class UserComponent implements OnInit {
     //this._route.navigateByUrl('/category');
     this._route.navigate(['/category']);
   }
+
+  getKumarDetails() {
+    this._route.navigate(['/users', 2, 'Kumar'],
+      {
+        queryParams: { page: 1, search: 'Kumar' },
+        fragment: 'loading'
+      })
+  }
 }

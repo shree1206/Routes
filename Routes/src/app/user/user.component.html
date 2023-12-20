@@ -4,4 +4,9 @@
 <p>User Id: {{user?.id}}</p>
 <p>User Name: {{user?.name}}</p>
 
-<a [routerLink]="['/users', 1, 'Vaibhav']">Get Details of Vaibhav</a>
+<a [routerLink]="['/users', 1, 'Vaibhav']" [queryParams]="{ page:1, search:'vaibhav'}" [fragment]="'load'">Get Details of Vaibhav</a>
+
+
+<div>
+    <button (click)="getKumarDetails()">Get kumar details</button>
+</div>
