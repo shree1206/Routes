@@ -24,7 +24,21 @@ export class UserComponent implements OnInit {
         id: res['id'],
         name: res['name']
       }
-    })
+    });
+
+    console.log(this._activeRoute.snapshot.queryParams);
+    console.log(this._activeRoute.snapshot.queryParamMap.get('search'));
+    console.log(this._activeRoute.snapshot.fragment);
+
+    //listening url changes
+    this._activeRoute.queryParams.subscribe((res) => {
+      console.log(res['page']);
+    });
+
+    this._activeRoute.fragment.subscribe((res) => {
+      console.log(res);
+    });
+
   }
 
   changeRoute() {
