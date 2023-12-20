@@ -6,7 +6,7 @@ import { CategoryComponent } from './category/category.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'users', component: UserComponent },
+  { path: 'users/:id/:name', component: UserComponent },
   { path: 'category', component: CategoryComponent }
 ];
 
