@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute, Params, Router } from '@angular/router';
 
 @Component({
   selector: 'app-user',
@@ -17,6 +17,14 @@ export class UserComponent implements OnInit {
       id: this._activeRoute.snapshot.params['id'],
       name: this._activeRoute.snapshot.paramMap.get('name')
     }
+
+    //listening url changes
+    this._activeRoute.params.subscribe((res: Params) => {
+      this.user = {
+        id: res['id'],
+        name: res['name']
+      }
+    })
   }
 
   changeRoute() {
