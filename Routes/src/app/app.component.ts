@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AuthService } from './services/user.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Routes';
+  flagL: boolean = false;
+  constructor(private _authService: AuthService) { }
+  doLogin() {
+    this._authService.login();
+    this.flagL = false;
+  }
+
+  doLogout() {
+    this._authService.logout();
+    this.flagL = true;
+  }
 }

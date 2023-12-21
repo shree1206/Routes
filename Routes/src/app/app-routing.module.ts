@@ -6,11 +6,13 @@ import { CategoryComponent } from './category/category.component';
 import { UserDetailsComponent } from './user-details/user-details.component';
 import { UserEditComponent } from './user-edit/user-edit.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { AuthGuardService } from './services/guards/authGuard.service';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
   {
-    path: 'users', component: UsersComponent, children: [
+    path: 'users', component: UsersComponent, canActivateChild: [AuthGuardService],
+    children: [
       { path: ':id/:name', component: UserDetailsComponent },
       { path: ':id/:name/edit', component: UserEditComponent }
     ]
