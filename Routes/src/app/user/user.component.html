@@ -1,12 +1,11 @@
-<p>user works!</p>
-<button class="btn btn-success" (click)="changeRoute()">Got to category</button>
+<a [routerLink]="['/users', 7, 'user1']">Get Details
+    of user1</a>
 <br><br>
-<p>User Id: {{user?.id}}</p>
-<p>User Name: {{user?.name}}</p>
+<a [routerLink]="['/users', 8, 'user2']">Get Details
+    of user2</a>
+<br><br>
+<a [routerLink]="['/users', 9, 'user3']">Get Details
+    of user3</a>
+<br><br>
 
-<a [routerLink]="['/users', 1, 'Vaibhav']" [queryParams]="{ page:1, search:'vaibhav'}" [fragment]="'load'">Get Details of Vaibhav</a>
-
-
-<div>
-    <button (click)="getKumarDetails()">Get kumar details</button>
-</div>
+<router-outlet></router-outlet>
