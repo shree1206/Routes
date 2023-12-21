@@ -10,7 +10,7 @@ import { AuthGuardService } from './services/guards/authGuard.service';
 import { DeactivateGuardService } from './services/guards/deactivateGuard.service';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
+  { path: '', component: HomeComponent, data: { page: 5, search: 'Static Data' } },
   {
     path: 'users', component: UsersComponent, canActivateChild: [AuthGuardService],
     children: [
