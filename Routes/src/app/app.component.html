@@ -1,6 +1,6 @@
 <div class="container">
-    <button (click)="doLogin()" *ngIf="flagL">Login</button>
-    <button (click)="doLogout()" *ngIf="!flagL">Logout</button><br><br>
+    <button class="btn btn-success" (click)="doLogin()" *ngIf="flagL">Login</button>
+    <button class="btn btn-danger" (click)="doLogout()" *ngIf="!flagL">Logout</button><br><br>
     <div class="row">
         <div class="col-md-3">
             <ul class="nav flex-column nav-pills">

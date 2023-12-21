@@ -11,6 +11,7 @@ import { UserEditComponent } from './user-edit/user-edit.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { AuthService } from './services/user.service';
 import { AuthGuardService } from './services/guards/authGuard.service';
+import { DeactivateGuardService } from './services/guards/deactivateGuard.service';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,7 @@ import { AuthGuardService } from './services/guards/authGuard.service';
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [AuthService, AuthGuardService],
+  providers: [AuthService, AuthGuardService, DeactivateGuardService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
