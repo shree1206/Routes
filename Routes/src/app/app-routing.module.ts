@@ -4,12 +4,14 @@ import { HomeComponent } from './home/home.component';
 import { UsersComponent } from './users/users.component';
 import { CategoryComponent } from './category/category.component';
 import { UserDetailsComponent } from './user-details/user-details.component';
+import { UserEditComponent } from './user-edit/user-edit.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
   {
     path: 'users', component: UsersComponent, children: [
-      { path: ':id/:name', component: UserDetailsComponent }
+      { path: ':id/:name', component: UserDetailsComponent },
+      { path: ':id/:name/edit', component: UserEditComponent }
     ]
   },
   { path: 'category', component: CategoryComponent }

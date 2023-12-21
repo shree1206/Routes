@@ -52,4 +52,12 @@ export class UserDetailsComponent {
         fragment: 'loading'
       })
   }
+
+  EditUser() {
+    this._route.navigate(['/users', this.user?.id, this.user?.name, 'edit'], {
+      queryParamsHandling: 'merge',
+      preserveFragment: true,
+      queryParams: { page: 2 },
+    })
+  }
 }
