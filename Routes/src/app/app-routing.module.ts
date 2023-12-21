@@ -5,6 +5,7 @@ import { UsersComponent } from './users/users.component';
 import { CategoryComponent } from './category/category.component';
 import { UserDetailsComponent } from './user-details/user-details.component';
 import { UserEditComponent } from './user-edit/user-edit.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -14,7 +15,9 @@ const routes: Routes = [
       { path: ':id/:name/edit', component: UserEditComponent }
     ]
   },
-  { path: 'category', component: CategoryComponent }
+  { path: 'category', component: CategoryComponent },
+  { path: 'not-found', component: PageNotFoundComponent },
+  { path: '**', redirectTo: 'not-found' }
 ];
 
 @NgModule({

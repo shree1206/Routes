@@ -8,6 +8,7 @@ import { UsersComponent } from './users/users.component';
 import { CategoryComponent } from './category/category.component';
 import { UserDetailsComponent } from './user-details/user-details.component';
 import { UserEditComponent } from './user-edit/user-edit.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { UserEditComponent } from './user-edit/user-edit.component';
     UsersComponent,
     CategoryComponent,
     UserDetailsComponent,
-    UserEditComponent
+    UserEditComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
